@@ -20,6 +20,8 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Button from '@material-ui/core/Button';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
 
 
 const drawerWidth = 240;
@@ -30,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
+    backgroundColor:"black",
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -109,7 +112,7 @@ export default function MiniDrawer() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar>
+      <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -121,19 +124,15 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
-          <HomeRoundedIcon/>
-          <Typography variant="h6" noWrap style={{marginLeft:"10px"}}>
+          <Button style={{marginLeft:"-10px"}} color="secondary" component={Link} to ="/"><HomeRoundedIcon/></Button>
+          <Typography variant="h6" noWrap style={{marginLeft:"-10px"}}>
             f1ndus.online
           </Typography>
-          
-
-    
       <Link to="/user/login" style={{marginLeft:"80%"}}>
         <button style={{backgroundColor:"palevioletred" , fontSize:"20px", cursor:"pointer"}}>login</button>
       </Link>
-      
-
         </Toolbar>
+        
       </AppBar>
       <Drawer
         variant="permanent"

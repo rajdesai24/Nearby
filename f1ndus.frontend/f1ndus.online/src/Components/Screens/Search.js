@@ -4,6 +4,14 @@ import Paper from '@material-ui/core/Paper';
 import UserNav from "../Parts/UserNav";
 import Grid from '@material-ui/core/Grid';
 
+var wcmLocations = [{street: "2016 Park Falls Drive",
+street2: "",
+city: "Raleigh", 
+state: "NC",
+zipCod: "27614"}];
+
+console.log(wcmLocations);
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -60,13 +68,13 @@ export default function CenteredGrid() {
           <Paper className={classes.paper3} >Details about you</Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper4}>Select Location on map</Paper>
+          <Paper className={classes.paper4}></Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper5}>Gig details and timing. List active until?</Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper6}>List yourself as an experiance</Paper>
+          <Paper className={classes.paper6}>List yourself as an experience</Paper>
         </Grid>
       </Grid>
     </div>
