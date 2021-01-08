@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import Home from "./Components/Screens/Home";
+// import Login from "./Components/Screens/Login";
+// import Signup from "./Components/Screens/Signup";
+import Dashboard from "./Components/Screens/dashboard";
+// import Search from "./Components/Screens/Search";
+// import { Ruexp } from "./Components/Screens/Ruexp";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <Dashboard />
+        </Route>
+        {/* <Route path="/user/login">
+          <Login />
+        </Route>
+        <Route path="/user/signup">
+          <Signup />
+        </Route>
+        <Route path="/user/dashboard">
+          <Dashboard />
+        </Route>
+        <Route path="/user/search">
+          <Search />
+        </Route>
+        <Route path="/user/areuexp">
+          <Ruexp />
+        </Route> */}
+      </Switch>
+    </BrowserRouter>
   );
 }
-
 export default App;
