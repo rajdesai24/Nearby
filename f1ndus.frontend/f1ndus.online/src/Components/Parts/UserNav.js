@@ -182,8 +182,8 @@ export default function MiniDrawer() {
         </List>
         
         <List>
-          {['Are you an expeirence?'].map((text) => (
-            <ListItem button key={text} button component={Link} to="/user/experience">
+          {['Are you an experiance?'].map((text) => (
+            <ListItem button key={text} button component={Link} to="/user/experiance">
               <ListItemIcon >{<PeopleIcon /> }</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
