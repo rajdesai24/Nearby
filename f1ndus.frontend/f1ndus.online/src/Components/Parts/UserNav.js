@@ -24,6 +24,7 @@ import LocationSearchingIcon from '@material-ui/icons/LocationSearching';
 import SendIcon from '@material-ui/icons/Send';
 import Button from '@material-ui/core/Button';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
+import DashboardRoundedIcon from '@material-ui/icons/DashboardRounded';
 
 
 
@@ -129,8 +130,11 @@ export default function MiniDrawer() {
           </IconButton>
           <Button color="secondary" component={Link} to ="/"><HomeRoundedIcon/></Button>
           <Typography variant="h6" noWrap style={{marginLeft:"10px"}}>
-            Hey (User) !
+            Hey user
           </Typography>
+          <Link to="#" style={{marginLeft:"80%"}}>
+        <button style={{backgroundColor:"palevioletred" , fontSize:"20px", cursor:"pointer"}}>logout</button>
+      </Link>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -153,6 +157,22 @@ export default function MiniDrawer() {
         </div>
         <Divider />
         <List>
+          {['Dashboard'].map((text) => (
+            <ListItem button key={text} button component={Link} to="/user/dashboard">
+              <ListItemIcon >{<DashboardRoundedIcon/> }</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+        <List>
+          {['To go list'].map((text) => (
+            <ListItem button key={text} button component={Link} to="/user/Togo_list">
+              <ListItemIcon >{<LocationSearchingIcon/> }</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+        <List>
           {['Find Experiences'].map((text) => (
             <ListItem button key={text} button component={Link} to="/user/search">
               <ListItemIcon >{<SearchIcon />}</ListItemIcon>
@@ -160,18 +180,11 @@ export default function MiniDrawer() {
             </ListItem>
           ))}
         </List>
+        
         <List>
           {['Are you an expeirence?'].map((text) => (
             <ListItem button key={text} button component={Link} to="/user/experience">
               <ListItemIcon >{<PeopleIcon /> }</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <List>
-          {['Quick Search'].map((text) => (
-            <ListItem button key={text} button component={Link} to="/user/quicksearch">
-              <ListItemIcon >{<LocationSearchingIcon /> }</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}

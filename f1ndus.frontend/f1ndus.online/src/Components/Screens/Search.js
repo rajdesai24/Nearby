@@ -62,13 +62,13 @@ export default function CenteredGrid() {
           <Paper className={classes.paper1}>Tell everyone about you</Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper2}>Where are you?</Paper>
+          <Paper className={classes.paper2}>Pick a category</Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper3} >Details about you</Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper4}></Paper>
+          <Paper className={classes.paper4}>List of categories</Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper5}>Gig details and timing. List active until?</Paper>
