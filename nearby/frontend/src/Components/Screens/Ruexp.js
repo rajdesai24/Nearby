@@ -89,6 +89,7 @@ export  function Ruexp() {
             passwordchange={setpassword}
             typechange={setType}
             descchange={setDescription}
+            photourlchange={setPhotourl}
           />
         );
       case 1:
